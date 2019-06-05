@@ -27,8 +27,12 @@ func Route(router *gin.Engine) {
 	{
 
 		//临时加options请求
-		api.OPTIONS("/signin", func(context *gin.Context) {
-			context.JSON(200, gin.H{})
+		api.OPTIONS("/signin", func(c *gin.Context) {
+			c.Header("Access-Control-Allow-Origin", "*")
+			c.Header("Access-Control-Allow-Headers", "Content-Type,Accept,DNT,Origin,Referer,User-Agent")
+			c.Header("Content-Type", "application/json")
+			c.JSON(204, gin.H{})
+			return
 		})
 		api.GET("/siteinfo", common.SiteInfo)
 		api.POST("/signin", user.Signin)
