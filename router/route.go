@@ -25,6 +25,11 @@ func Route(router *gin.Engine) {
 
 	api := router.Group(apiPrefix, middleware.RefreshTokenCookie)
 	{
+
+		//临时加options请求
+		api.OPTIONS("/signin", func(context *gin.Context) {
+			context.JSON(200, gin.H{})
+		})
 		api.GET("/siteinfo", common.SiteInfo)
 		api.POST("/signin", user.Signin)
 		api.POST("/signup", user.Signup)
