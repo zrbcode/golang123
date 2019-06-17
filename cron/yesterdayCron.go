@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/globalsign/mgo/bson"
-	"github.com/shen100/golang123/model"
-	"github.com/shen100/golang123/utils"
+	"github.com/zrbcode/golang123/model"
+	"github.com/zrbcode/golang123/utils"
 )
 
 func yesterdayCron() {

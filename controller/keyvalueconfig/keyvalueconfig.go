@@ -6,8 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/jinzhu/gorm"
-	"github.com/shen100/golang123/controller/common"
-	"github.com/shen100/golang123/model"
+	"github.com/zrbcode/golang123/controller/common"
+	"github.com/zrbcode/golang123/model"
 )
 
 // SetKeyValue 设置key, value
